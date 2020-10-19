@@ -36,3 +36,35 @@
     transform: rotate(360deg);
   }
 }
+
+.noteful{
+  display: flex;
+  justify-content: center;
+  outline: solid;
+  outline-color: #494848;
+}
+
+.changable{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.changable .mainPanel{
+  width: 70%;
+}
+
+.changable .sidebar{
+  width: 30%;
+}
+
+
+.changable section{
+  padding: 10px;
+  outline: solid;
+  outline-color: #494848;
+}
+
+.highlight{
+  background-color: yellow;
+}
