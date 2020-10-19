@@ -24,6 +24,7 @@ class FolderSide extends Component{
         return (
             <div>
                 {folderList}
+                <button onClick={() => this.props.onBack() }	>Back</button>
             </div>
         )
     }

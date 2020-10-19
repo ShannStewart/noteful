@@ -24,7 +24,9 @@ class FolderMain extends Component{
         <NoteList
             key={i} 
             name={note.name} 
-            date={note.modified}/>)
+            date={note.modified}
+            id={note.id}
+            onNote={this.props.onNote}/>)
 
         return(
             <div>

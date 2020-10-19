@@ -59,14 +59,14 @@ class App extends Component {
         <section className='sidebar'>
           <Switch>
               <Route exact path='/' render={() => {return <SideBar data={DUMMY} onFolder={this.handleFolder}/>}}/>
-              <Route path='/folder' render={() => {return <FolderSide data={DUMMY} onFolder={this.handleFolder} selected={this.state.folder}/>}}/>
+              <Route path='/folder' render={({ history }) => {return <FolderSide data={DUMMY} onFolder={this.handleFolder} selected={this.state.folder} onBack={history.goBack}/>}}/>
               <Route path='/note'render={({ history })=> {return <NoteSide data={DUMMY} selected={this.state.note} onBack={history.goBack}/>}}/>
             </Switch>
         </section>
         <section className='mainPanel'>
           <Switch>
             <Route exact path='/' render={() => {return <Main data={DUMMY} onNote={this.handleNote} onReset={this.handleReset}/>}}/>
-            <Route path='/folder' render={() => {return <FolderMain data={DUMMY} selected={this.state.folder}/>}}/>
+            <Route path='/folder' render={() => {return <FolderMain data={DUMMY} onNote={this.handleNote} selected={this.state.folder}/>}}/>
             <Route path='/note' render={() => {return <NoteMain data={DUMMY} selected={this.state.note}/>}}/>
           </Switch>
         </section>
